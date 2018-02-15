@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+Página de Login do Hotspot
+
+Created on : 14/02/2018, 02:28:00
+Author     : Messias
+-->
+<html>
+    <head>
+        <title>Login Ok!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="-1" />
+        <!--<meta http-equiv="refresh" content="2; url=$(link-redirect)">-->
+        <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        
+    <script language="JavaScript">
+   <!--
+    function startClock() {
+       if (popup === 'true') {
+        open('$(link-status)', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290,height=200');
+       }
+	
+	location.href = '$(link-redirect)';
+    }
+//-->
+
+   function count_time_redirect(){
+        var i = 10;
+        var tempo;
+        var interval = window.setInterval(function(){
+  
+          tempo = i+' Segundo';
+          if (i > 1){
+              tempo += 's';
+          }       
+          if (i>0) {
+           document.getElementById('sgd').innerHTML = tempo;
+             i--;
+           }else {
+             clearInterval(interval);
+             location.href = '$(link-redirect)';
+           }
+           
+        } ,1000);
+        
+      
+   }
+
+    count_time_redirect();
+
+    </script>
+        
+        
+    </head>
+   <!-- <body onLoad="startClock()" >-->
+   <body  onLoad="startClock()">
+    <div id="div-content">
+         <div id="div-container" class=" col-12">
+         <div id="div-left" class="col-12 col-md-6" >
+              <img id="image" src="img/success.png" />  
+             <p class="lead"><h2>Pronto,<br> Agora Você Já Está Conectado!</h2> <br>
+             Aguarde o Redirecionamento Automático em <h4 id="sgd"> </h4> ou          
+            <a class="mybtn3" href="$(link-redirect)">Clique Aqui Para Continuar!</a>
+              </p>
+                
+            
+       </div> 
+        
+             <div id="div-right" class="col-12 col-md-6" >
+           
+           <h2 class="led">
+              
+               $(if login-by == 'trial') 
+                Bem Vindo Usuário!
+
+                $(elif login-by != 'mac') 
+                Bem Vindo $(username)!
+                 $(endif)
+           
+           </h2>
+           <img  id="image" src="img/hotspot.png" class="img-fluid" /> 
+      
+            <p>Este é Um serviço Privado de Acesso à <b>Internet</b>,
+                Desenvolvido Pelo Projeto <b>Cidade Conecada</b>.<br>
+                
+            </p>
+           
+            <!--<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+            <input type="submit" class="mybtn3" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" value="Logout"/>
+            </form>-->
+        </div>
+        
+        </div>
+            </div>
+            
+        <div id="div-foot" class="col-12"> 
+            
+               <div align="center">
+                <a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)"> <img  id="mk-logo"  src="img/mk-logo.png"/> 
+                    </a>
+                   <b style="color: #c1c1c1; font-size: 9px">Powered by MikroTik RouterOS</b>
+               </div> 
+
+               <div class="" >
+                <small class="lead">Desenvolvido por </small>
+                <img id="md-logo" src="img/md-logo2.png"/>
+                
+                </div>
+                
+                
+               
+                
+            </div>    
+        
+        <!-- Scrpits JavaScrpit-->    
+         <script  src="/bootstrap4/js/jquery.js" ></script>
+         <script  src="/bootstrap4/js/bootstrap.min.js" ></script>
+         <script  src="script.js" ></script>
+            
+    </body>
+</html>

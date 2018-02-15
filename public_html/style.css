@@ -1,0 +1,287 @@
+
+/* 
+   Folha de Estilo
+
+    Created on : 13/02/2018, 16:12:53
+    Author     : Messias
+*/
+
+@import "style.mb.css";
+
+
+body {
+    margin:0;
+    padding: 0;
+    width:100%;
+    min-width: 240px;
+    height: 100%;
+   /* AdobeMingStd-Light*/
+  /*font-family: "neuropolitical rg"; */
+}
+
+h1,h2,h3,h4,h5,h6,h7, img {
+    margin-top: 30px;
+}
+
+h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
+    letter-spacing: 2px;
+    cursor: crosshair;
+    color:#FF8080;
+}
+
+ p b {
+    text-transform: uppercase;
+}
+
+ p b:hover {
+    letter-spacing: 2px;
+    cursor: crosshair;
+    color:#FF8080;
+    text-transform: uppercase;
+}
+
+#div-content{
+    /*border: solid 1px red;*/
+    margin: 0;
+    padding: 0;
+   
+}
+
+
+
+#div-container{
+ /*border: solid 1px red;*/   
+  width: 100%;
+  display: flex;
+  padding: 2%;
+}
+
+
+#div-left, #div-right {
+    /*border: solid 1px red;*/
+    padding: 5%;
+    display: flex;
+    color: #FFFFFF;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+}
+
+#div-left {
+    background: linear-gradient(to left, #00BFFF, #1E90FF);
+}
+
+
+
+#div-left img {
+    width: 150px;
+    height: 150px;
+}
+
+
+#div-left a {color: #FFFFFF;}
+#div-left a:hover {
+   text-decoration: none;
+   opacity: 0.6;
+}
+
+#div-left p {
+  
+    margin-top: 20px;
+}
+
+.error {
+    color: #FF8080;
+}
+
+
+#div-right {
+    background: linear-gradient(to left, #4169E1, #1E90FF);
+}
+#div-right a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+
+#div-left #image {
+    width: 100px;
+    height: 100px;
+}
+
+.icon {
+    width: 50px; 
+    height: 50px;
+    padding: 5px;
+}
+
+
+
+#div-foot {
+   /*border: solid 1px red;*/
+    padding: 20px;
+    display: flex;
+     align-items: center;
+    justify-content: space-around;
+}
+
+#div-foot a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#div-foot small {
+    color: #808080;
+   
+}
+
+#div-foot div {
+    padding: 10px;
+}
+
+#div-foot #md-logo {
+    margin-left: 10px;
+    width: 60px;
+    height: 40px;
+}
+
+#div-foot #mk-logo {
+    width: 160px;
+    height: 50px;
+}
+
+.myform2, .myform {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   margin-top: 50px;
+   padding: 20px;
+}
+
+
+
+.myform{
+    /*border: solid 0.5px #FFFFFF;*/
+    border-radius: 5px 5px;
+    background: linear-gradient(to right  ,rgba(255,255,255,0.2),rgba(20,264,741,0.2), rgba(0,0,0,0.2));
+     /*linear-gradient(to left, #4169E1, #1E90FF);*/
+}
+
+.myform2 {
+   align-items: center;
+   justify-content: center;
+}
+
+
+
+.myinput {
+    border-color: #4169E1;
+    border: 0;
+    padding: 10px;
+    border-radius: 5px 5px;
+    color: #4169E1;
+    background: rgba(255,255,255, 0.7);
+}
+.myinput:focus {
+    box-shadow: 1px 1px 1px 1px #4169E1;
+   
+}
+
+.mybtn {
+    /* background-color:  #4169E1;*/
+    background: linear-gradient(-90deg, #1E90FF, #4169E1);
+    color: #FFFFFF;
+    box-shadow: 1px 1px 1px #ccc;
+    border-radius: 5px 5px;
+}
+
+.mybtn2 {
+    background-color:  #1E90FF;
+    color: #FFFFFF;
+    box-shadow: 1px 1px 2px #808080;
+}
+
+.mybtn ,.mybtn2 {
+    padding: 1%;
+    font-weight: 500;
+    border: none;
+}
+
+.mybtn:hover , .mybtn2:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    background: #FFFFFF;
+    color: #4169E1;
+    
+}
+
+.mybtn3 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    align-items: center;
+    align-content: center;
+    background: rgba(255,255,255, 0.2);
+    border: solid 0.5px #FFFFFF;
+    border-radius: 5px 5px;
+    color: #FFFFFF;
+    text-decoration: none;
+   
+}
+
+.mybtn3:hover{
+   cursor: pointer;
+   opacity: 0.7;
+   letter-spacing: 3px;
+   text-decoration: none;
+}
+
+.mybtn,.myinput, img {
+     margin-top: 10px;
+}
+
+.mytable {
+    border: solid 2px #FFFFFF;
+   border-radius: 5px 5px;
+    margin: 30px;
+}
+.mytable tr,.mytable td { border: solid 0.5px #FFFFFF;}
+
+.mytable-th,.mytable-tb {
+    padding: 7px;
+}
+
+.mytable-th{
+    font-weight: 500;
+    background-color: rgba(400,100,200,0.2);
+    text-align: right;
+}
+
+.mytable-tb {
+    font-weight: 500;
+    color: #FFFFFF;
+    background-color: rgba(0,0,0,0.2);
+    text-align: left;
+    
+} 
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}

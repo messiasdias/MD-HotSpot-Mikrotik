@@ -1,0 +1,47 @@
+
+/* 
+    Created on : 13/02/2018, 23:06:34
+    Author     : Messias
+*/
+
+@media screen and (min-width: 781px){
+    #div-container{
+        flex-direction: row;
+    }
+    
+    #div-left {
+     border-radius: 5px 0px 0px 5px;
+   }
+   #div-right {
+   border-radius: 0px 5px 5px 0px;
+    }
+    
+   #div-foot {
+    flex-direction: row;
+   
+    }
+    
+    
+}
+
+@media screen and (max-width: 780px){
+   #div-container{
+        flex-direction: column-reverse;
+    }
+    
+   #div-left {
+     border-radius: 0px 0px 5px 5px;
+   }
+   
+   #div-right {
+   border-radius: 5px 5px 0px 0px;
+    }
+  
+     #div-foot {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    
+}

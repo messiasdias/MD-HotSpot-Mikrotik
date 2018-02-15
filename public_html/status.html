@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+Página de Login do Hotspot
+
+Created on : 14/02/2018, 02:28:00
+Author     : Messias
+-->
+<html>
+    <head>
+        <title>Status</title>
+        $(if refresh-timeout)
+        <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
+        $(endif)
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="pragma" content="no-cache" />
+        <meta http-equiv="expires" content="-1" />
+        <!--<meta http-equiv="refresh" content="2; url=$(link-redirect)">-->
+        <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        
+        <script language="JavaScript">
+       
+        if (advert-pending === 'yes') {
+            var popup = '';
+            function focusAdvert() {
+                if (window.focus) popup.focus();
+            }
+            function openAdvert() {
+                popup = open('$(link-advert)', 'hotspot_advert', '');
+                setTimeout("focusAdvert()", 1000);
+            }
+        }
+            function openLogout() {
+                if (window.name !== 'hotspot_status') return true;
+                open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
+                window.close();
+                return false;
+            }
+    
+        </script>
+        
+    </head>
+
+   <body   bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0"
+$(if advert-pending == 'yes')
+	onLoad="openAdvert()"
+$(endif) >
+    <div id="div-content">
+         <div id="div-container" class=" col-12">
+         <div id="div-left" class="col-12 col-md-6" >
+            <h2 >Status</h2>
+             <img id="image" src="img/international-connection2.png" />  
+               <form class="myform2" action="/logout" name="logout" onSubmit="return openLogout()">
+                    <table class="mytable">
+                   
+                        <tr><td class="mytable-th" >Endereço IP:</td><td class="mytable-tb" >$(ip)</td></tr>
+                            <tr><td class="mytable-th"  >Bytes up/down:</td><td class="mytable-tb" >$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
+                    $(if session-time-left)
+                            <tr><td class="mytable-th"  >Tempo Restante:</td><td class="mytable-tb" >$(uptime) / $(session-time-left)</td></tr>
+                    $(else)
+                            <tr><td class="mytable-th" >Tempo Conectado:</td><td class="mytable-tb" >$(uptime)</td></tr>
+                    $(endif)
+                    $(if blocked == 'yes')
+                            <tr><td  class="mytable-th" >Status:</td><td class="mytable-tb" ><div style="color: #FF8080">
+                    <a href="$(link-advert)" target="hotspot_advert">advertisement</a> required</div></td>
+                    $(elif refresh-timeout)
+                            <tr><td  class="mytable-th" >Status Refresh:</td><td class="mytable-tb" >$(refresh-timeout)</td>
+                    $(endif)
+
+                    </table>
+                    $(if login-by-mac != 'yes')
+                    <br>
+                    <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
+                    <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
+                    <!-- end of user manager link -->
+                    <input class="mybtn3" type="submit" value="Sair">
+                    $(endif)
+                    </form>
+
+                  
+      
+                
+            
+       </div> 
+        
+             <div id="div-right" class="col-12 col-md-6" >
+           
+           <h2 class="led">
+               $(if login-by == 'trial') 
+                Bem Vindo Usuário!
+
+                $(elif login-by != 'mac') 
+                Bem Vindo $(username)!
+                 $(endif)
+           </h2>
+           <img  id="image" src="img/hotspot.png" class="img-fluid" /> 
+      
+            <p>Este é Um serviço Privado de Acesso à <b>Internet</b>,
+                Desenvolvido Pelo Projeto <b>Cidade Conecada</b>.<br>
+                
+            </p>
+           
+            <!--<form action="$(link-logout)" name="logout" onSubmit="return openLogout()">
+            <input type="submit" class="mybtn3" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)" value="Logout"/>
+            </form>-->
+        </div>
+        
+        </div>
+            </div>
+            
+        <div id="div-foot" class="col-12"> 
+            
+               <div align="center">
+                <a href="$(link-login-only)?target=lv&amp;dst=$(link-orig-esc)"> <img  id="mk-logo"  src="img/mk-logo.png"/> 
+                    </a>
+                   <b style="color: #c1c1c1; font-size: 9px">Powered by MikroTik RouterOS</b>
+               </div> 
+
+               <div class="" >
+                <small class="lead">Desenvolvido por </small>
+                <img id="md-logo" src="img/md-logo2.png"/>
+                
+                </div>
+                
+                
+               
+                
+            </div>    
+        
+        <!-- Scrpits JavaScrpit-->    
+         <script  src="/bootstrap4/js/jquery.js" ></script>
+         <script  src="/bootstrap4/js/bootstrap.min.js" ></script>
+         <script  src="script.js" ></script>
+            
+    </body>
+</html>
+
