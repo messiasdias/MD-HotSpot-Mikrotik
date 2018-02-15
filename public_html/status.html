@@ -52,7 +52,7 @@ $(endif) >
          <div id="div-left" class="col-12 col-md-6" >
             <h2 >Status</h2>
              <img id="image" src="img/conect.png" />  
-               <form class="myform2" action="/logout" name="logout" onSubmit="return openLogout()">
+             <form class="myform2" method="post" action="$(link-logout)" name="logout" onSubmit="return openLogout()">
                     <table class="mytable ">
                    
                         <tr><td class="mytable-th" >Endereço IP:</td><td class="mytable-tb" >$(ip)</td></tr>
@@ -60,18 +60,23 @@ $(endif) >
                     $(if session-time-left)
                             <tr><td class="mytable-th"  >Tempo Restante:</td><td class="mytable-tb" >$(uptime) / $(session-time-left)</td></tr>
                     $(else)
-                            <tr><td class="mytable-th" >Tempo Conectado:</td><td class="mytable-tb" >$(uptime)</td></tr>
+                            <tr><td class="mytable-th" >Tempo de Atividade:</td><td class="mytable-tb" >$(uptime)</td></tr>
                     $(endif)
                     $(if blocked == 'yes')
-                            <tr><td  class="mytable-th" >Status:</td><td class="mytable-tb" ><div style="color: #FF8080">
+                            <tr><td  class="mytable-th" >Status:</td><td class="mytable-tb" ><div>
                     <a href="$(link-advert)" target="hotspot_advert">advertisement</a> required</div></td>
                     $(elif refresh-timeout)
                             <tr><td  class="mytable-th" >Status Refresh:</td><td class="mytable-tb" >$(refresh-timeout)</td>
                     $(endif)
 
                     </table>
+                   
+                     $(if login-by == 'trial') 
+                     <a href="regulamento.html">Regulamento do Teste Grátis</a>
+                     $(endif)
+                   
+                   
                     $(if login-by-mac != 'yes')
-                    <br>
                     <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
                     <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
                     <!-- end of user manager link -->
