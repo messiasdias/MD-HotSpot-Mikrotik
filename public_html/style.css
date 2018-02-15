@@ -166,7 +166,7 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
 .myform{
     /*border: solid 0.5px #FFFFFF;*/
     border-radius: 5px 5px;
-    background: linear-gradient(to right  ,rgba(255,255,255,0.2),rgba(20,264,741,0.2), rgba(0,0,0,0.2));
+    background: linear-gradient(to right bottom ,rgba(255,255,255,0.1), rgba(0,0,0,0.1));
      /*linear-gradient(to left, #4169E1, #1E90FF);*/
 }
 

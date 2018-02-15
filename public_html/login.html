@@ -45,14 +45,14 @@ Author     : Messias
      
           <h2 >OK, Vamos Começar!</h2>
           
-         <p> Esta é sua Porta de Entrada Para o Mundo Conectado.<br>Insira Seu nome de Usuário e Senha para Login No Sistema.</p> 
+         <p> Esta é sua Porta de Entrada Para o <b>Mundo Conectado</b>.<br>Insira Seu nome de <b>Usuário</b> e <b>Senha</b> para Login No Sistema.</p> 
                        
         <form class="myform"  name="sendin" action="$(link-login-only)" method="post">
             <div  class="text-center">
             <img src="img/user.png" />
             </div>
                 <input required="true" type="text" class="myinput col-12" placeholder="Usuário" name="username"  value="$(username)" />
-		<input required="true"  type="password" placeholder="Senha" class="myinput col-12"  name="password" />
+		<input required="true"  type="password" placeholder="Senha" class="myinput col-12" name="password" />
                 
                  <p class="error lead"> 
                     $(if error) $(error) $(endif)
