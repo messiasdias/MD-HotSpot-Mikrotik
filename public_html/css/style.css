@@ -5,22 +5,23 @@
     Created on : 13/02/2018, 16:12:53
     Author     : Messias
 */
-
+@import "bootstrap/css/bootstrap.min.css";
 @import "style.mb.css";
+
 
 @font-face {
     font-family: font1;
-    src: url('font/lekton.otf');
+    src: url('../font/lekton.otf');
 }
 
 @font-face {
     font-family: font2;
-    src: url('font/larabiefont.ttf');
+    src: url('../font/larabiefont.ttf');
 }
 
 @font-face {
     font-family: font3;
-    src: url('font/EMLATIN.ttf');
+    src: url('../font/EMLATIN.ttf');
 }
 
 body {
@@ -29,8 +30,7 @@ body {
     width:100%;
     min-width: 240px;
     height: 100%;
-   /* AdobeMingStd-Light*/
-  /*font-family: "neuropolitical rg"; */
+    font-family:sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6,h7, img {
@@ -157,6 +157,12 @@ b:hover {
     width: 160px;
     height: 50px;
 }
+
+#form-login {
+    max-width: 300px;
+}
+
+
 
 .myform2, .myform {
    display: flex;
@@ -324,5 +330,8 @@ b:hover {
 
 .error {
     color: #FF8080;
+    display: flex;
+    flex-wrap: wrap;
+   
 }
 

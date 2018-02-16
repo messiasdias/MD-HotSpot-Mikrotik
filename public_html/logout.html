@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!--
-Página de Login do Hotspot
+Pï¿½gina de Login do Hotspot
 
 Created on : 14/02/2018, 02:28:00
 Author     : Messias
@@ -15,8 +15,7 @@ Author     : Messias
         <meta http-equiv="pragma" content="no-cache">
         <meta http-equiv="expires" content="-1">
         <!--<meta http-equiv="refresh" content="2; url=$(link-redirect)">-->
-        <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
         
       
         
@@ -44,8 +43,8 @@ Author     : Messias
              <form class="myform2" method="post" action="$(link-logout)" name="logout" onSubmit="return openLogout()">
                     <table class="mytable ">
                    
-                        <tr><td class="mytable-th" >Endereço IP:</td><td class="mytable-tb" >$(ip)</td></tr>
-                        <tr><td class="mytable-th" >Endereço MAC:</td><td class="mytable-tb" >$(mac)</td></tr>
+                        <tr><td class="mytable-th" >Endereï¿½o IP:</td><td class="mytable-tb" >$(ip)</td></tr>
+                        <tr><td class="mytable-th" >Endereï¿½o MAC:</td><td class="mytable-tb" >$(mac)</td></tr>
                             <tr><td class="mytable-th"  >Bytes up/down:</td><td class="mytable-tb" >$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
                     $(if session-time-left)
                             <tr><td class="mytable-th"  >Tempo Restante:</td><td class="mytable-tb" >$(uptime) / $(session-time-left)</td></tr>
@@ -62,7 +61,7 @@ Author     : Messias
                     </table>
                    
                      $(if login-by == 'trial') 
-                     <a class="mylink" href="regulamento.html">Regulamento do Teste Grátis</a>
+                     <a class="mylink" href="regulamento.html">Regulamento do Teste Grï¿½tis</a>
                      $(endif)
                    
                     </form>
@@ -88,8 +87,8 @@ Author     : Messias
            </h2>
            <img  id="image" src="img/hotspot.png" class="img-fluid" /> 
       
-            <p>Este é Um serviço Privado de Acesso à <b>Internet</b>,
-                Desenvolvido Pelo Projeto <b>Cidade Conecada</b>.<br>
+            <p>Este Ã© Um ServiÃ§o Privado de Acesso Ã  <b>Internet</b>,
+                Desenvolvido Pelo Projeto <b>Cidade Conectada</b>.
                 
             </p>
            
@@ -120,11 +119,7 @@ Author     : Messias
                 
             </div>    
         
-        <!-- Scrpits JavaScrpit-->    
-         <script  src="/bootstrap4/js/jquery.js" ></script>
-         <script  src="/bootstrap4/js/bootstrap.min.js" ></script>
-         <script  src="script.js" ></script>
-            
+   
     </body>
 </html>
 

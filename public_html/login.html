@@ -14,7 +14,7 @@ Author     : Messias
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="expires" content="-1" />
         <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css" />
-        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
         
     </head>
     <body  >
@@ -47,17 +47,19 @@ Author     : Messias
           
          <p> Esta é sua Porta de Entrada Para o <b>Mundo Conectado</b>.<br>Insira Seu nome de <b>Usuário</b> e <b>Senha</b> para Login No Sistema.</p> 
                        
-        <form class="myform"  name="sendin" action="$(link-login-only)" method="post">
+        <form id="form-login" name="login" action="$(link-login-only)" method="post" class="myform" >
             <div  class="text-center">
             <img src="img/user.png" />
             </div>
             <input required="true" type="text" class="myinput col-12" placeholder="Usuário" name="username"  value="$(username)" autofocus="true" />
 		<input required="true"  type="password" placeholder="Senha" class="myinput col-12" name="password" />
-                
-                 <p class="error lead"> 
+                 <div class="text-center">
+                 <p class=" error  lead"> 
+                   
                     $(if error) $(error) $(endif)
                 </p>  
-		<input class="mybtn3 col-6"  type="submit" name="dst" value="log in" />
+                 </div> 
+		<input class="mybtn3 col-6"  type="submit"  value="OK" >
 	</form>
               
            
@@ -72,8 +74,8 @@ Author     : Messias
            <h2>Olá!</h2>
            <img  id="image" src="img/hotspot.png" class="img-fluid" /> 
       
-            <p>Este é Um serviço Privado de Acesso à <b>Internet</b>,
-                Desenvolvido Pelo Projeto <b>Cidade Conecada</b>.<br>
+            <p>Este é Um Serviço Privado de Acesso à <b>Internet</b>,
+                Desenvolvido Pelo Projeto <b>Cidade Conectada</b>.
                 
             </p>
             $(if trial == 'yes')
@@ -110,10 +112,7 @@ Author     : Messias
                 
             </div>    
         
-        <!-- Scrpits JavaScrpit-->    
-         <script  src="/bootstrap4/js/jquery.js" ></script>
-         <script  src="/bootstrap4/js/bootstrap.min.js" ></script>
-         <script  src="script.js" ></script>
+    
      
     </body>
 </html>
