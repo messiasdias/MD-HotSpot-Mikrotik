@@ -1,60 +1,51 @@
 <!DOCTYPE html>
 <!--
-P√°gina de Login do Hotspot
+P·gina de Login do Hotspot
 
 Created on : 14/02/2018, 02:28:00
 Author     : Messias
 -->
 <html>
     <head>
-        <title>Status</title>
+        <title>Logout</title>
         $(if refresh-timeout)
         <meta http-equiv="refresh" content="$(refresh-timeout-secs)">
         $(endif)
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta http-equiv="pragma" content="no-cache" />
-        <meta http-equiv="expires" content="-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <meta http-equiv="pragma" content="no-cache">
+        <meta http-equiv="expires" content="-1">
         <!--<meta http-equiv="refresh" content="2; url=$(link-redirect)">-->
         <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css" />
         <link rel="stylesheet" type="text/css" href="style.css"/>
         
-        <script language="JavaScript">
-       
-        if (advert-pending === 'yes') {
-            var popup = '';
-            function focusAdvert() {
-                if (window.focus) popup.focus();
-            }
-            function openAdvert() {
-                popup = open('$(link-advert)', 'hotspot_advert', '');
-                setTimeout("focusAdvert()", 1000);
-            }
-        }
-            function openLogout() {
-                if (window.name !== 'hotspot_status') return true;
-                open('$(link-logout)', 'hotspot_logout', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=280,height=250');
-                window.close();
-                return false;
-            }
-    
-        </script>
+      
         
     </head>
 
    <body   bottommargin="0" topmargin="0" leftmargin="0" rightmargin="0" $(if advert-pending == 'yes') onLoad="openAdvert()" $(endif) >
-    <div id="div-content">
+    
+       <script language="JavaScript">
+
+    /*function openLogin() {
+	if (window.name !== 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+    */
+     </script>
+       
+       <div id="div-content">
          <div id="div-container" class=" col-12">
          <div id="div-left" class="col-12 col-md-6" >
             
-             <h3>Status</h3>
-             <img id="image" src="img/internet.png" />  
+             <h3>Logout</h3>
+             <img id="image" src="img/exit.png" />  
              <form class="myform2" method="post" action="$(link-logout)" name="logout" onSubmit="return openLogout()">
                     <table class="mytable ">
                    
-                        <tr><td class="mytable-th" >Endere√ßo IP:</td><td class="mytable-tb" >$(ip)</td></tr>
-                        <tr><td class="mytable-th" >Endere√ßo MAC:</td><td class="mytable-tb" >$(mac)</td></tr>
+                        <tr><td class="mytable-th" >EndereÁo IP:</td><td class="mytable-tb" >$(ip)</td></tr>
+                        <tr><td class="mytable-th" >EndereÁo MAC:</td><td class="mytable-tb" >$(mac)</td></tr>
                             <tr><td class="mytable-th"  >Bytes up/down:</td><td class="mytable-tb" >$(bytes-in-nice) / $(bytes-out-nice)</td></tr>
                     $(if session-time-left)
                             <tr><td class="mytable-th"  >Tempo Restante:</td><td class="mytable-tb" >$(uptime) / $(session-time-left)</td></tr>
@@ -71,18 +62,14 @@ Author     : Messias
                     </table>
                    
                      $(if login-by == 'trial') 
-                     <a class="mylink" href="regulamento.html">Regulamento do Teste Gr√°tis</a>
+                     <a class="mylink" href="regulamento.html">Regulamento do Teste Gr·tis</a>
                      $(endif)
                    
-                   
-                    $(if login-by-mac != 'yes')
-                    <!-- user manager link. if user manager resides on other router, replace $(hostname) by its address
-                    <button onclick="document.location='http://$(hostname)/user?subs='; return false;">status</button>
-                    <!-- end of user manager link -->
-                    <input class="mybtn3 btn-red" type="submit" value="Sair">
-                    $(endif)
                     </form>
-
+                        
+             <form  action="$(link-login)" name="login" onSubmit="return openLogin()">
+             <input class="mybtn3 btn-green" type="submit" value="log in">
+             </form>
                   
       
                 
@@ -93,15 +80,15 @@ Author     : Messias
            
            <h2>
                $(if login-by == 'trial') 
-                Bem Vindo Usu√°rio!
+                Volte Sempre!
 
                 $(elif login-by != 'mac') 
-                Bem Vindo $(username)!
+                Volte Sempre $(username)!
                  $(endif)
            </h2>
            <img  id="image" src="img/hotspot.png" class="img-fluid" /> 
       
-            <p>Este √© Um servi√ßo Privado de Acesso √† <b>Internet</b>,
+            <p>Este È Um serviÁo Privado de Acesso ‡ <b>Internet</b>,
                 Desenvolvido Pelo Projeto <b>Cidade Conecada</b>.<br>
                 
             </p>

@@ -8,6 +8,20 @@
 
 @import "style.mb.css";
 
+@font-face {
+    font-family: font1;
+    src: url('font/lekton.otf');
+}
+
+@font-face {
+    font-family: font2;
+    src: url('font/larabiefont.ttf');
+}
+
+@font-face {
+    font-family: font3;
+    src: url('font/EMLATIN.ttf');
+}
 
 body {
     margin:0;
@@ -20,8 +34,16 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,h7, img {
-    margin-top: 30px;
+    margin-top: 10px;
+    font-family: 'font1';
+    font-weight: 500;
+    color: #FFFFFF;  
 }
+
+h1 {font-size: 10px;}
+h2 {font-size: 60px;}
+h3 {font-size: 42px;}
+h4 {font-size: 30px;}
 
 h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
     letter-spacing: 2px;
@@ -29,12 +51,14 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
     color:#FF8080;
 }
 
- p b {
-    text-transform: uppercase;
+b {
+    font-family: 'font2';
+    font-size: 15px;
 }
 
- p b:hover {
+b:hover {
     letter-spacing: 2px;
+     font-size: 18px;
     cursor: crosshair;
     color:#FF8080;
     text-transform: uppercase;
@@ -79,22 +103,10 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
     height: 150px;
 }
 
-
-#div-left a {color: #FFFFFF;}
-#div-left a:hover {
-   text-decoration: none;
-   opacity: 0.6;
-}
-
 #div-left p {
   
     margin-top: 20px;
 }
-
-.error {
-    color: #FF8080;
-}
-
 
 #div-right {
     background: linear-gradient(to left, #4169E1, #1E90FF);
@@ -109,13 +121,6 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
     width: 100px;
     height: 100px;
 }
-
-.icon {
-    width: 50px; 
-    height: 50px;
-    padding: 5px;
-}
-
 
 
 #div-foot {
@@ -142,13 +147,13 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
     padding: 10px;
 }
 
-#div-foot #md-logo {
+#md-logo {
     margin-left: 10px;
     width: 60px;
     height: 40px;
 }
 
-#div-foot #mk-logo {
+#mk-logo {
     width: 160px;
     height: 50px;
 }
@@ -175,6 +180,16 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
    justify-content: center;
 }
 
+.mylink {
+    font-family: 'font1';
+    font-weight: bolder;
+    color: #FFFFFF; 
+}
+
+.mylink:hover {
+    text-decoration: line-through;
+   color: #4169E1;
+}
 
 
 .myinput {
@@ -220,26 +235,47 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
 
 .mybtn3 {
     font-weight: 600;
+    font-family: 'font3';
     text-transform: uppercase;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 10px;
     display: block;
     align-items: center;
     align-content: center;
-    background: rgba(255,255,255, 0.2);
-    border: solid 0.5px #FFFFFF;
+    border: solid 0.5px rgba(255,255,255,0.2);
     border-radius: 5px 5px;
     color: #FFFFFF;
+    background: transparent;
     text-decoration: none;
-   
+    -webkit-transition: background 0.8s linear;
+    -moz-transition: background 0.8s linear;
+    -ms-transition: background 0.8s linear;
+    -o-transition: background 0.8s linear;
+    transition: background 0.8s linear;
 }
 
-.mybtn3:hover{
+.mybtn3:hover {
    cursor: pointer;
-   opacity: 0.7;
-   letter-spacing: 3px;
+   background: rgba(0,0,0, 0.2);
+   letter-spacing: 2px;
    text-decoration: none;
 }
+
+.btn-green {
+    background: rgba(0,100,0, 0.8);
+}
+
+.btn-red {
+    background: rgba(255,0,0, 0.8);
+}
+
+.btn-orange {
+    background: rgba(255,130,0, 0.8);
+}
+
+
+
 
 .mybtn,.myinput, img {
      margin-top: 10px;
@@ -285,3 +321,8 @@ h1:hover ,h2:hover ,h3:hover ,h4:hover ,h5:hover ,h6:hover ,h7:hover {
     justify-content: center;
     align-content: center;
 }
+
+.error {
+    color: #FF8080;
+}
+
